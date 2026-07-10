@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0F1B3D;
+  --color-ink-2: #1A2855;
+  --color-ink-3: #2A3878;
+  --color-bronze: #B08D57;
+  --color-bronze-2: #C9A876;
+  --color-bronze-3: #8A6E42;
+  --color-ivory: #FAF7F2;
+  --color-ivory-2: #F2EDE3;
+  --color-charcoal: #1F2937;
+  --color-muted: #6B6256;
+  --color-line: #E5DFD3;
+
+  --font-serif: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+
+  --text-eyebrow: 0.72rem;
+  --tracking-eyebrow: 0.18em;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #FAF7F2;
+  --foreground: #0F1B3D;
+  --surface: #FAF7F2;
+  --surface-2: #F2EDE3;
+  --surface-deep: #0F1B3D;
+  --surface-deeper: #1A2855;
+  --on-surface: #0F1B3D;
+  --on-surface-muted: #6B6256;
+  --on-surface-soft: #1F2937;
+  --line-rule: #E5DFD3;
+}
+
+html.dark {
+  --background: #0B132B;
+  --foreground: #F5F1EA;
+  --surface: #0B132B;
+  --surface-2: #111B3D;
+  --surface-deep: #050918;
+  --surface-deeper: #0B132B;
+  --on-surface: #F5F1EA;
+  --on-surface-muted: #B5AC9B;
+  --on-surface-soft: #DDD6C6;
+  --line-rule: #1F2950;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #0F1B3D;
+  color: #FAF7F2;
+}
+
+.font-display {
+  font-family: var(--font-serif);
+  font-feature-settings: normal;
+}
+
+:where(a, button, input, textarea, select, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 2px solid #B08D57;
+  outline-offset: 3px;
+  border-radius: 1px;
+  transition: outline-offset 120ms ease-out;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  background: #0F1B3D;
+  color: #FAF7F2;
+  padding: 0.6rem 1rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  border: 1px solid #B08D57;
+  transition: top 150ms ease-out;
+}
+.skip-link:focus-visible {
+  top: 1rem;
+  outline: 2px solid #B08D57;
+  outline-offset: 2px;
+}
+
+.drop-cap::first-letter,
+.article-prose > p:first-of-type::first-letter {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 4.5rem;
+  line-height: 0.85;
+  float: left;
+  padding: 0.45rem 0.6rem 0 0;
+  color: #B08D57;
+}
+
+@keyframes cawt-slow-zoom {
+  0% { transform: scale(1.02); }
+  100% { transform: scale(1.12); }
+}
+.cawt-slow-zoom {
+  animation: cawt-slow-zoom 28s ease-out infinite alternate;
+  transform-origin: 50% 55%;
+  will-change: transform;
+}
+
+@keyframes cawt-fade-up {
+  from { opacity: 0; transform: translate3d(0, 14px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+.cawt-fade-up {
+  animation: cawt-fade-up 600ms ease-out both;
+}
+
+/* ---- Dark-mode overrides for legacy palette classes ----
+   These tokens were used before the theme migration. They remain
+   in light mode unchanged; under .dark they remap to theme tokens. */
+
+html.dark .bg-ivory { background-color: var(--surface) !important; }
+html.dark .bg-ivory-2 { background-color: var(--surface-2) !important; }
+html.dark .bg-ink { background-color: var(--surface-deep) !important; }
+html.dark .bg-ink-2 { background-color: var(--surface-deeper) !important; }
+html.dark .text-ink { color: var(--on-surface) !important; }
+html.dark .text-charcoal { color: var(--on-surface-soft) !important; }
+html.dark .text-muted { color: var(--on-surface-muted) !important; }
+html.dark .border-line { border-color: var(--line-rule) !important; }
+
+/* Opacity-modified ink-on-light: in dark mode these become ivory-on-dark */
+html.dark .text-ink\/60,
+html.dark .text-ink\/65,
+html.dark .text-ink\/70,
+html.dark .text-ink\/80,
+html.dark .text-ink\/85 { color: rgb(245 241 234 / 0.85) !important; }
+html.dark .text-ink\/40,
+html.dark .text-ink\/50 { color: rgb(245 241 234 / 0.55) !important; }
