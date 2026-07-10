@@ -196,7 +196,7 @@ function Approach() {
 function FoundersStrip() {
   const founders = [
     { slug: "neeraj-aggarwal", name: "Neeraj Aggarwal", role: "Founder & CEO", years: "25", bio: "Funds, Private Clients, Capital Markets & Corporate Services. Most recently Regional Commercial Head — India, Mauritius & Middle East at Apex Group.", quals: "TEP · LLB · CFP · MBA", photo: photos.founderNeeraj },
-    { slug: "niyati-doshi", name: "Niyati Vijay Doshi", role: "Founder & COO", years: "15", bio: "Estate & succession planning, fund services, financial-legal-compliance expertise across Vistra, BSE and advisory practice of Mr. G N Bajpai.", quals: "CA · CS · LLB · B.Com", photo: photos.founderNiyati },
+    { slug: "niyati-doshi", name: "Niyati Vijay Doshi", role: "Founder & COO", years: "15", bio: "Estate & succession planning, fund services, financial-legal-compliance expertise across Vistra, BSE and Intuit Consulting Pvt Ltd.", quals: "CA · CS · LLB · B.Com", photo: photos.founderNiyati },
     { slug: "chirag-shetty", name: "Chirag Shetty", role: "Founder & CBO", years: "20+", bio: "Banking, fund administration and business development across India, Mauritius, Middle East and Southeast Asia. Senior leadership at Apex, Kotak Mahindra and HSBC.", quals: "B.Com · MMS (NLDIMSR)", photo: photos.founderChirag },
   ];
   return (
