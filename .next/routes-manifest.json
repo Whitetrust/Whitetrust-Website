@@ -1,0 +1,246 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/corporate-services/[slug]",
+      "regex": "^/corporate\\-services/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/corporate\\-services/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/dashboard/prospect/[token]",
+      "regex": "^/dashboard/prospect/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPtoken": "nxtPtoken"
+      },
+      "namedRegex": "^/dashboard/prospect/(?<nxtPtoken>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/fund-services/[slug]",
+      "regex": "^/fund\\-services/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/fund\\-services/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/insights/[slug]",
+      "regex": "^/insights/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/insights/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/private-client/[slug]",
+      "regex": "^/private\\-client/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/private\\-client/(?<nxtPslug>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/r/[token]",
+      "regex": "^/r/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPtoken": "nxtPtoken"
+      },
+      "namedRegex": "^/r/(?<nxtPtoken>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/studio/[[...tool]]",
+      "regex": "^/studio(?:/(.+?))?(?:/)?$",
+      "routeKeys": {
+        "nxtPtool": "nxtPtool"
+      },
+      "namedRegex": "^/studio(?:/(?<nxtPtool>.+?))?(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about",
+      "regex": "^/about(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about(?:/)?$"
+    },
+    {
+      "page": "/api/book",
+      "regex": "^/api/book(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/book(?:/)?$"
+    },
+    {
+      "page": "/api/track",
+      "regex": "^/api/track(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/track(?:/)?$"
+    },
+    {
+      "page": "/contact",
+      "regex": "^/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact(?:/)?$"
+    },
+    {
+      "page": "/corporate-services",
+      "regex": "^/corporate\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/corporate\\-services(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/disclosures",
+      "regex": "^/disclosures(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/disclosures(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/fund-services",
+      "regex": "^/fund\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fund\\-services(?:/)?$"
+    },
+    {
+      "page": "/fund-services/aif-structuring",
+      "regex": "^/fund\\-services/aif\\-structuring(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fund\\-services/aif\\-structuring(?:/)?$"
+    },
+    {
+      "page": "/fund-services/fund-administration",
+      "regex": "^/fund\\-services/fund\\-administration(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fund\\-services/fund\\-administration(?:/)?$"
+    },
+    {
+      "page": "/fund-services/gift-city-tpfm",
+      "regex": "^/fund\\-services/gift\\-city\\-tpfm(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fund\\-services/gift\\-city\\-tpfm(?:/)?$"
+    },
+    {
+      "page": "/insights",
+      "regex": "^/insights(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/insights(?:/)?$"
+    },
+    {
+      "page": "/leadership",
+      "regex": "^/leadership(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/leadership(?:/)?$"
+    },
+    {
+      "page": "/privacy",
+      "regex": "^/privacy(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/privacy(?:/)?$"
+    },
+    {
+      "page": "/private-client",
+      "regex": "^/private\\-client(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/private\\-client(?:/)?$"
+    },
+    {
+      "page": "/private-client/cross-border-nri",
+      "regex": "^/private\\-client/cross\\-border\\-nri(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/private\\-client/cross\\-border\\-nri(?:/)?$"
+    },
+    {
+      "page": "/private-client/estate-succession",
+      "regex": "^/private\\-client/estate\\-succession(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/private\\-client/estate\\-succession(?:/)?$"
+    },
+    {
+      "page": "/private-client/family-office",
+      "regex": "^/private\\-client/family\\-office(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/private\\-client/family\\-office(?:/)?$"
+    },
+    {
+      "page": "/private-client/trusts",
+      "regex": "^/private\\-client/trusts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/private\\-client/trusts(?:/)?$"
+    },
+    {
+      "page": "/terms",
+      "regex": "^/terms(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/terms(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

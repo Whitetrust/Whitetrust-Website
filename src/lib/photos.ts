@@ -100,13 +100,13 @@ export const photos = {
     focal: "object-[50%_25%]",
   },
   founderNiyati: {
-    url: u("1517694712202-14dd9538aa97"),
+    url: "/founder-niyati.jpg",
     alt: "Architectural detail — pending portrait.",
     credit: { name: "Glenn Carstens-Peters", href: "https://unsplash.com/@glenncarstenspeters" },
     focal: "object-[50%_50%]",
   },
   founderChirag: {
-    url: u("1518770660439-4636190af475"),
+    url: "/founder-chirag.jpg",
     alt: "Architectural detail — pending portrait.",
     credit: { name: "Mike Petrucci", href: "https://unsplash.com/@mikepetrucci" },
     focal: "object-[40%_60%]",
