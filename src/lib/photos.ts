@@ -101,14 +101,12 @@ export const photos = {
   },
   founderNiyati: {
     url: "/founder-niyati.jpg",
-    alt: "Architectural detail — pending portrait.",
-    credit: { name: "Glenn Carstens-Peters", href: "https://unsplash.com/@glenncarstenspeters" },
+    alt: "Niyati Vijay Doshi, Founder & Chief Operating Officer of CAWT.",
     focal: "object-[50%_50%]",
   },
   founderChirag: {
     url: "/founder-chirag.jpg",
-    alt: "Architectural detail — pending portrait.",
-    credit: { name: "Mike Petrucci", href: "https://unsplash.com/@mikepetrucci" },
+    alt: "Chirag Shetty, Founder & Chief Business Officer of CAWT.",
     focal: "object-[40%_60%]",
   },
 } as const satisfies Record<string, Photo>;
