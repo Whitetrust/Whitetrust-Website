@@ -19,7 +19,7 @@ export const privateClientServices: ServicePage[] = [
     eyebrow: "Private Clients",
     title: "Wills & Executorship Services",
     lead:
-      "Bespoke wills, codicils, letters of wishes and execution services.",
+      "Bespoke wills, codicils, letters of wishes and executorship services.",
     photoKey: "estateBand",
     sections: [
       {
