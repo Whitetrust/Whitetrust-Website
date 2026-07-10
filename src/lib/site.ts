@@ -17,7 +17,7 @@ export const site = {
   whatsappHref: "https://wa.me/919820661411",
   address: {
     registered:
-      "8, Floor-2, Plot 58, Goa Mansion, Dr. Sunderlal Bahl Marg, Ballard Estate, Mumbai — 400 038",
+      "8, Floor-2, Plot 58, Goa Mansion, Dr. Sunderlal Bahl Marg, Fort, Mumbai — 400 001",
     correspondence:
       "A/1605, One Lodha Place, Senapati Bapat Marg, Lower Parel, Mumbai — 400 013",
   },
@@ -38,8 +38,8 @@ export const site = {
     {
       name: "Niyati Doshi",
       email: "niyatidoshi@cawt.ai",
-      phone: "+91 88791 87017",
-      phoneHref: "tel:+918879187017",
+      phone: "+91 98330 80248",
+      phoneHref: "tel:+919833080248",
     },
   ],
 } as const;
