@@ -19,7 +19,7 @@ const services = [
     href: "/private-client/wills-execution",
     label: "01",
     title: "Wills & Executorship Services",
-    body: "Bespoke wills, codicils, letters of wishes and execution services.",
+    body: "Bespoke wills, codicils, letters of wishes and executorship services.",
     bullets: ["Will Drafting", "Codicils", "Letter of Wishes", "Executorship Services"],
   },
   {
