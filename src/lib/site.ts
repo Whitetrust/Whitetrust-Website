@@ -10,11 +10,11 @@ export const site = {
   founderEmail: "neerajaggarwal@cawt.ai",
   contactEmail: "contact@cawt.ai",
   cin: "U66190MH2026PTC470065",
-  phone: "+91 98206 61411",
-  phoneHref: "tel:+919820661411",
+  phone: "+91 91364 59136",
+  phoneHref: "tel:+919136459136",
   secondaryPhone: "+91 98193 16054",
   secondaryPhoneHref: "tel:+919819316054",
-  whatsappHref: "https://wa.me/919820661411",
+  whatsappHref: "https://wa.me/+919136459136",
   address: {
     registered:
       "8, Floor-2, Plot 58, Goa Mansion, Dr. Sunderlal Bahl Marg, Fort, Mumbai — 400 001",
