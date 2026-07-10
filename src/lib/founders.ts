@@ -40,7 +40,7 @@ export const founders: Founder[] = [
     role: "Founder & Chief Operating Officer",
     years: "15",
     shortBio:
-      "A rare combination of financial, legal and compliance expertise across estate, succession and fund services.",
+      "Estate & succession planning, fund services, and financial, legal & compliance expertise across Vistra, BSE and Intuit Consulting Pvt. Ltd.",
     longBio: [
       "Niyati is the Founder & COO of Cap Alpha WhiteTrust — a multi-disciplinary professional bringing together a rare combination of financial, legal and compliance expertise.",
       "With over 15 years across estate & succession planning and end-to-end fund services, she advises entrepreneurs, promoter families, senior executives and family offices on the full spectrum of succession and estate matters — known for her meticulous documentation and ability to navigate complex multi-jurisdictional structures.",
@@ -52,7 +52,7 @@ export const founders: Founder[] = [
       { firm: "BSE Ltd.", role: "Capital Markets, Regulatory & Governance" },
       {
         firm: "Intuit Consulting",
-        role: "Mr. G N Bajpai's firm — Advisory Practice",
+        role: "Advisory Practice",
       },
     ],
     practiceAreas: [
