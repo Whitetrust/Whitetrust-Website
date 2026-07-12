@@ -129,7 +129,7 @@ function IntroBand() {
 
 function WhyUs() {
   const items = [
-    { eyebrow: "60+ Years", title: "Combined Leadership", body: "Three founders with senior-practice experience across global platforms." },
+    { eyebrow: "60+ Years", title: "Combined Leadership", body: "Three co-founders with senior-practice experience across global platforms." },
     { eyebrow: "100% Focus", title: "UHNI Specialisation", body: "A dedicated practice for promoter groups, entrepreneurs and senior executives — not a side desk inside a bank or audit firm." },
     { eyebrow: "360° Scope", title: "Integrated Platform", body: "Estate planning, trust structuring, AIF setup and cross-border advisory under one accountable partner." },
     { eyebrow: "GIFT City", title: "On-the-Ground IFSCA", body: "Upcoming GIFT City branch enabling IFSCA-compliant cross-border wealth and family-vehicle structuring." },
@@ -195,9 +195,9 @@ function Approach() {
 
 function FoundersStrip() {
   const founders = [
-    { slug: "neeraj-aggarwal", name: "Neeraj Aggarwal", role: "Founder & CEO", years: "25", bio: "Funds, Private Clients, Capital Markets & Corporate Services. Most recently Regional Commercial Head — India, Mauritius & Middle East at Apex Group.", quals: "TEP · LLB · CFP · MBA", photo: photos.founderNeeraj },
-    { slug: "niyati-doshi", name: "Niyati Vijay Doshi", role: "Founder & COO", years: "15", bio: "Estate & succession planning, fund services, financial-legal-compliance expertise across Vistra, BSE and Intuit Consulting Pvt Ltd.", quals: "CA · CS · Gen.LLB · B.Com", photo: photos.founderNiyati },
-    { slug: "chirag-shetty", name: "Chirag Shetty", role: "Founder & CBO", years: "20+", bio: "Banking, fund administration and business development across India, Mauritius, Middle East and Southeast Asia. Senior leadership at Apex, Kotak Mahindra and HSBC.", quals: "B.Com · MMS (NLDIMSR)", photo: photos.founderChirag },
+    { slug: "neeraj-aggarwal", name: "Neeraj Aggarwal", role: "Co-Founder & CEO", years: "25", bio: "Funds, Private Clients, Capital Markets & Corporate Services. Most recently Regional Commercial Head — India, Mauritius & Middle East at Apex Group.", quals: "TEP · LLB · CFP · MBA", photo: photos.founderNeeraj },
+    { slug: "niyati-doshi", name: "Niyati Vijay Doshi", role: "Co-Founder & COO", years: "15", bio: "Estate & succession planning, fund services, financial-legal-compliance expertise across Vistra, BSE and Intuit Consulting Pvt Ltd.", quals: "CA · CS · Gen.LLB · B.Com", photo: photos.founderNiyati },
+    { slug: "chirag-shetty", name: "Chirag Shetty", role: "Co-Founder & CBO", years: "20+", bio: "Banking, fund administration and business development across India, Mauritius, Middle East and Southeast Asia. Senior leadership at Apex, Kotak Mahindra and HSBC.", quals: "B.Com · MMS (NLDIMSR)", photo: photos.founderChirag },
   ];
   return (
     <Section tone="ivory-2">
@@ -205,7 +205,7 @@ function FoundersStrip() {
         <Reveal className="mb-12">
           <Eyebrow tone="bronze">Leadership</Eyebrow>
           <h2 className="mt-6 font-display text-4xl md:text-5xl text-[var(--on-surface)] leading-tight">
-            Three founders.
+            Three co-founders.
             <br />
             <span className="italic text-bronze">One accountable partnership.</span>
           </h2>
