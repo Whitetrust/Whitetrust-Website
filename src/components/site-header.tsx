@@ -169,7 +169,7 @@ export function SiteHeader() {
               <Search className="h-4 w-4" />
             </button>
             <Link
-              href="/contact"
+              href="https://outlook.office.com/book/WhiteTrust@cawt.ai/?ismsaljsauthenabled"
               className="inline-flex items-center min-h-11 text-xs xl:text-sm text-[var(--on-surface)] hover:text-bronze border-b border-[var(--on-surface)] hover:border-bronze pb-0.5 transition-colors ml-2"
             >
               Book An Appointment
@@ -236,7 +236,7 @@ export function SiteHeader() {
               ))}
               <div className="pt-6 mt-6 border-t border-ivory/15 text-sm text-ivory/70">
                 <Link
-                  href="/contact"
+                  href="https://outlook.office.com/book/WhiteTrust@cawt.ai/?ismsaljsauthenabled"
                   onClick={() => setMobileOpen(false)}
                   className="inline-flex items-center min-h-11 text-bronze border-b border-bronze pb-0.5 hover:text-bronze-3"
                 >

@@ -118,7 +118,7 @@ export function HeroCarousel() {
               </p>
             </div>
             <div className="mt-10">
-              <CTA href="/contact" variant="secondary" size="lg">
+              <CTA href="https://outlook.office.com/book/WhiteTrust@cawt.ai/?ismsaljsauthenabled" variant="secondary" size="lg">
                 Book an appointment
               </CTA>
             </div>

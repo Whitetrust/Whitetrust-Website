@@ -205,7 +205,7 @@ function CTABand() {
           <span className="italic text-bronze"> wealth or fund requirement.</span>
         </h2>
         <div className="mt-10 flex justify-center">
-          <CTA href="/contact" variant="primary" size="lg">
+          <CTA href="https://outlook.office.com/book/WhiteTrust@cawt.ai/?ismsaljsauthenabled" variant="primary" size="lg">
             Book an appointment
           </CTA>
         </div>

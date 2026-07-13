@@ -332,7 +332,7 @@ function BookingBand() {
                   <a href={site.phoneHref} className="block mt-1 text-ivory hover:text-bronze">{site.phone}</a>
                 </div>
               </div>
-              <Link href="/contact" className="mt-8 inline-flex items-center gap-2 w-full justify-center bg-bronze text-ivory py-3 px-6 hover:bg-bronze-3 transition-colors">
+              <Link href="https://outlook.office.com/book/WhiteTrust@cawt.ai/?ismsaljsauthenabled" className="mt-8 inline-flex items-center gap-2 w-full justify-center bg-bronze text-ivory py-3 px-6 hover:bg-bronze-3 transition-colors">
                 Book an appointment
                 <ArrowRight className="h-4 w-4" />
               </Link>
