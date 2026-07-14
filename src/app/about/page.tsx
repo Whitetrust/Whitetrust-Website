@@ -41,9 +41,9 @@ const whyChoose = [
 ];
 
 const numbers = [
-  { to: 72, suffix: "+", comma: false, label: "Family Trusts in Process This Year" },
-  { to: 12, suffix: "+", comma: false, label: "Funds in Process This Year" },
-  { to: 10000, suffix: " Cr+", comma: true, label: "Assets in Process This Year" },
+  { to: 72, suffix: "+", comma: false, label: "Family Trusts in Process in FY 2026-2027" },
+  { to: 12, suffix: "+", comma: false, label: "Funds in Process in FY 2026-2027" },
+  { to: 10000, suffix: " Cr+", comma: true, label: "Assets in Process in FY 2026-2027" },
 ];
 
 export default function AboutPage() {
