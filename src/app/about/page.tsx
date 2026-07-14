@@ -5,6 +5,7 @@ import { Eyebrow } from "@/components/eyebrow";
 import { CTA } from "@/components/button";
 import { PageHero } from "@/components/page-hero";
 import { CountUp } from "@/components/count-up";
+import { photos } from "@/lib/photos";
 
 export const metadata: Metadata = {
   title: "About Us",
