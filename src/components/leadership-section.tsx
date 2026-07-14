@@ -6,7 +6,6 @@ import { Section } from "@/components/section";
 import { photos } from "@/lib/photos";
 
 export default function LeadershipSection() {
-function FoundersStrip() {
   const founders = [
     { slug: "neeraj-aggarwal", name: "Neeraj Aggarwal", role: "Co-Founder & CEO", years: "25", bio: "Funds, Private Clients, Capital Markets & Corporate Services. Most recently Regional Commercial Head — India, Mauritius & Middle East at Apex Group.", quals: "TEP · LLB · CFP · MBA", photo: photos.founderNeeraj },
     { slug: "niyati-doshi", name: "Niyati Vijay Doshi", role: "Co-Founder & COO", years: "15", bio: "Estate & succession planning, fund services, financial-legal-compliance expertise across Vistra, BSE and Intuit Consulting Pvt Ltd.", quals: "CA · CS · Gen.LLB · B.Com", photo: photos.founderNiyati },
