@@ -29,7 +29,7 @@ export const founders: Founder[] = [
         firm: "Apex Group",
         role: "Regional Commercial Head — India, Mauritius & Middle East",
       },
-      { firm: "Vistra", role: "Commercial Head — India & Mauritius (11 years)" },
+      { firm: "Vistra", role: "Commercial Head — India & Mauritius" },
       { firm: "Kotak Group", role: "Estate Planning & Private Trust Structuring" },
       { firm: "ICICI Bank", role: "Banking, Insurance & Mutual Funds" },
     ],
