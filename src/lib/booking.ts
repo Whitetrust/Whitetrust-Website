@@ -2,6 +2,8 @@ import { addDays, addMinutes, isAfter, isWeekend, set, startOfDay } from "date-f
 import { fromZonedTime, toZonedTime } from "date-fns-tz";
 import { graph } from "./graph";
 import { db, type EnquiryDoc } from "./mongo";
+import { container } from "./cosmos";
+import { randomUUID } from "crypto";
 import { env, mongoEnabled } from "./env";
 
 const ROUND_ROBIN_KEY = "round-robin-cursor";
@@ -199,16 +201,24 @@ export type BookingResult =
   | { ok: true; queued: true }
   | { ok: false; error: string };
 
-export async function persistEnquiry(input: BookingInput): Promise<string | null> {
-  if (!mongoEnabled()) return null;
-  const doc: EnquiryDoc = {
-    ts: new Date(),
-    ...input,
-    status: "received",
-  };
-  const d = await db();
-  const r = await d.collection<EnquiryDoc>("enquiries").insertOne(doc);
-  return r.insertedId.toString();
+export async function persistEnquiry(
+  input: BookingInput
+): Promise<string | null> {
+  try {
+    const id = randomUUID();
+
+    await container.items.create({
+      id,
+      ...input,
+      status: "received",
+      ts: new Date().toISOString(),
+    });
+
+    return id;
+  } catch (err) {
+    console.error("Cosmos DB Error:", err);
+    return null;
+  }
 }
 
 export async function attemptBooking(
@@ -267,35 +277,36 @@ export async function attemptBooking(
       `,
     });
 
-    if (enquiryId && mongoEnabled()) {
-      const d = await db();
-      await d.collection<EnquiryDoc>("enquiries").updateOne(
-        { _id: enquiryId as unknown as EnquiryDoc["_id"] },
-        {
-          $set: {
-            status: "booked",
-            booking: {
-              mailbox,
-              start: slot.start.toISOString(),
-              end: slot.end.toISOString(),
-              eventId: event.id,
-              teamsUrl: event.onlineMeetingUrl,
-            },
-          },
-        }
-      );
-    }
+    if (enquiryId) {
+  await container.item(enquiryId, enquiryId).replace({
+    id: enquiryId,
+    ...input,
+    status: "booked",
+    ts: new Date().toISOString(),
+    booking: {
+      mailbox,
+      start: slot.start.toISOString(),
+      end: slot.end.toISOString(),
+      eventId: event.id,
+      teamsUrl: event.onlineMeetingUrl,
+    },
+  });
+}
 
     return { ok: true, bookedFor: slot.start.toISOString(), mailbox };
-  } catch (e) {
+    } catch (e) {
     const msg = e instanceof Error ? e.message : "Unknown error";
-    if (enquiryId && mongoEnabled()) {
-      const d = await db();
-      await d.collection<EnquiryDoc>("enquiries").updateOne(
-        { _id: enquiryId as unknown as EnquiryDoc["_id"] },
-        { $set: { status: "failed-booking", errorMessage: msg } }
-      );
+
+    if (enquiryId) {
+      await container.item(enquiryId, enquiryId).replace({
+        id: enquiryId,
+        ...input,
+        status: "failed-booking",
+        errorMessage: msg,
+        ts: new Date().toISOString(),
+      });
     }
+
     return { ok: false, error: msg };
   }
 }
