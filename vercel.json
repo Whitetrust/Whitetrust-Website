@@ -14,6 +14,16 @@
     "src/app/r/[token]/route.ts": {
       "memory": 256,
       "maxDuration": 5
+    },
+    "src/app/api/sync-bookings/route.ts": {
+      "memory": 1024,
+      "maxDuration": 60
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/sync-bookings",
+      "schedule": "0 3 * * *"
+    }
+  ]
 }

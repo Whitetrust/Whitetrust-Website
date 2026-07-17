@@ -25,6 +25,8 @@ export const env = {
     .filter(Boolean),
   mongoUri: get("MONGODB_URI"),
   mongoDb: get("MONGODB_DB") ?? "cawt",
+  bookingsBusinessId: get("BOOKINGS_BUSINESS_ID") ?? "WhiteTrust@cawt.ai",
+  cronSecret: get("CRON_SECRET"),
   isProd: process.env.NODE_ENV === "production",
 };
 
