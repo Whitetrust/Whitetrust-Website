@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { bookingEnabled, mongoEnabled } from "@/lib/env";
-import { attemptBooking, persistEnquiry } from "@/lib/booking";
+import { notifyEnquiry, persistEnquiry } from "@/lib/booking";
 
 export const runtime = "nodejs";
 
@@ -54,12 +54,12 @@ export async function POST(req: Request) {
 
   if (!bookingEnabled()) {
     console.warn(
-      "[book] booking disabled — set AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, BOOKING_MAILBOXES"
+      "[book] mail notifications disabled — set AZURE_TENANT_ID, AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, BOOKING_MAILBOXES"
     );
     return NextResponse.json({ ok: true, queued: true });
   }
 
-  const result = await attemptBooking(
+  const result = await notifyEnquiry(
     {
       name: input.name,
       email: input.email,
@@ -76,8 +76,8 @@ export async function POST(req: Request) {
   );
 
   if (!result.ok) {
-    console.error("[book] booking failed:", result.error);
-    // We still return success to the user — a human will follow up.
+    console.error("[book] notify failed:", result.error);
+    // We still return success to the user — the enquiry is saved either way.
     return NextResponse.json({ ok: true, queued: true });
   }
 

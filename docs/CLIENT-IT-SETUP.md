@@ -62,9 +62,10 @@ No code change required.
 
 ## Part B — Azure AD app for Microsoft Graph (≈30 min)
 
-This lets the website's contact form find the next free 30-minute slot
-across the founder calendars, book it, send a Teams invite, and email the
-prospect a confirmation — all server-to-server.
+This lets the website's contact form email a thank-you confirmation to the
+prospect and notify the founder mailboxes of the new enquiry — all
+server-to-server. (Meeting scheduling itself is handled separately by the
+"Book an appointment" links, which point to Microsoft Bookings.)
 
 **Who can do this:** a **Global Administrator** of the CAWT Microsoft 365
 tenant. Steps B.4 (restricting the app) require Exchange admin rights too.
