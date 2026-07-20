@@ -6,7 +6,7 @@ export const site = {
   description:
     "Premier fiduciary and fund services firm delivering integrated estate planning, succession advisory, family fund solutions and Indian Focussed / Global fund services for global investors.",
   url: "https://www.cawt.ai",
-  email: "neerajaggarwal@cawt.ai",
+  email: "contact@cawt.ai",
   founderEmail: "neerajaggarwal@cawt.ai",
   contactEmail: "contact@cawt.ai",
   cin: "U66190MH2026PTC470065",
