@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Menu, X, Search } from "lucide-react";
 import { nav } from "@/lib/site";
@@ -78,13 +79,13 @@ export function SiteHeader() {
       <Container width="wide">
         <div className="flex h-22 items-center justify-between">
           <Link href="/" className="flex items-center min-h-11" aria-label="CAWT home">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/cawt-logo-blue.png"
               alt="CAWT — Cap Alpha WhiteTrust"
               className="h-12 md:h-14 w-auto"
               width={1364}
               height={802}
+              priority
             />
           </Link>
 
@@ -198,8 +199,13 @@ export function SiteHeader() {
         >
           <Container width="wide">
             <div className="flex h-22 items-center justify-between">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/cawt-logo-white.png" alt="CAWT" className="h-11 w-auto" />
+              <Image
+                src="/cawt-logo-white.png"
+                alt="CAWT"
+                className="h-11 w-auto"
+                width={4695}
+                height={2761}
+              />
               <button
                 aria-label="Close menu"
                 onClick={() => setMobileOpen(false)}

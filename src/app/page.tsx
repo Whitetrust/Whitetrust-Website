@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ArrowUpRight, Users, Briefcase, UserCheck } from "lucide-react";
 import { Container } from "@/components/container";
 import { Section } from "@/components/section";
@@ -218,11 +219,12 @@ function FoundersStrip() {
                 className="group bg-[var(--surface)] border border-[var(--line-rule)] p-0 flex flex-col h-full hover:border-bronze transition-colors"
               >
                 <div className="relative aspect-[4/5] bg-ink overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={f.photo.url}
                     alt={f.photo.alt}
-                    className={`absolute inset-0 w-full h-full object-cover ${f.photo.focal} transition-transform duration-700 group-hover:scale-105`}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className={`object-cover ${f.photo.focal} transition-transform duration-700 group-hover:scale-105`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/30 to-ink/10" />
                   <div className="absolute inset-x-0 bottom-0 p-6">
@@ -278,11 +280,12 @@ function InsightsTeaser() {
             <Reveal key={it.title} index={i}>
               <article className="group h-full">
                 <div className="aspect-[4/3] mb-6 relative overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={it.photo.url}
                     alt=""
-                    className={`absolute inset-0 w-full h-full object-cover ${it.photo.focal} transition-transform duration-700 group-hover:scale-105`}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className={`object-cover ${it.photo.focal} transition-transform duration-700 group-hover:scale-105`}
                   />
                   <div className="absolute inset-0 bg-ink/40" />
                 </div>

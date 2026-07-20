@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "./container";
 import { Eyebrow } from "./eyebrow";
 import { site } from "@/lib/site";
@@ -9,11 +10,12 @@ export function SiteFooter() {
       <Container width="wide" className="py-20">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-7">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/cawt-logo-white.png"
               alt="Cap Alpha WhiteTrust"
               className="h-14 w-auto"
+              width={4695}
+              height={2761}
             />
             <p className="mt-6 text-ivory/70 max-w-md leading-relaxed">
               {site.footerName}

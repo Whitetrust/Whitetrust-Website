@@ -1,9 +1,15 @@
 import { MetadataRoute } from "next";
+import {
+  privateClientServices,
+  fundServices,
+  corporateServices,
+} from "@/lib/service-pages";
+import { listPosts, sanityEnabled } from "@/lib/sanity";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.cawt.ai";
+const baseUrl = "https://www.cawt.ai";
 
-  return [
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -71,4 +77,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
   ];
+
+  const servicePages: MetadataRoute.Sitemap = [
+    ...privateClientServices,
+    ...fundServices,
+    ...corporateServices,
+  ].map((service) => ({
+    url: `${baseUrl}${service.href}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  const posts = sanityEnabled ? await listPosts() : [];
+  const insightPages: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${baseUrl}/insights/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: "monthly",
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...servicePages, ...insightPages];
 }

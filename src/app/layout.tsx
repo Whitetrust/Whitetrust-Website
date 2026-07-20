@@ -36,8 +36,32 @@ export const metadata: Metadata = {
     siteName: site.shortName,
     locale: "en_IN",
     type: "website",
+    images: [{ url: "/cawt-logo-blue.png", width: 1364, height: 802 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.name,
+    description: site.description,
+    images: ["/cawt-logo-blue.png"],
   },
   robots: { index: true, follow: true },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.name,
+  alternateName: site.shortName,
+  url: site.url,
+  logo: `${site.url}/cawt-logo-blue.png`,
+  description: site.description,
+  email: site.contactEmail,
+  telephone: site.phone,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.address.registered,
+    addressCountry: "IN",
+  },
 };
 
 export default async function RootLayout({
@@ -59,6 +83,10 @@ export default async function RootLayout({
     >
       <head>
         <ThemeBootstrap />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-[var(--surface)] text-[var(--on-surface)]">
         <a href="#main" className="skip-link">Skip to content</a>

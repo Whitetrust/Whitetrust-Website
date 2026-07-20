@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Container } from "@/components/container";
 import { Section } from "@/components/section";
 import { Eyebrow } from "@/components/eyebrow";
@@ -59,11 +60,12 @@ function FounderBlock({
             }`}
           >
             <div className="aspect-[4/5] bg-ink relative overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={FOUNDER_PHOTOS[founder.slug as keyof typeof FOUNDER_PHOTOS]?.url ?? photos.aboutHero.url}
                 alt=""
-                className={`absolute inset-0 w-full h-full object-cover ${FOUNDER_PHOTOS[founder.slug as keyof typeof FOUNDER_PHOTOS]?.focal ?? ""}`}
+                fill
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className={`object-cover ${FOUNDER_PHOTOS[founder.slug as keyof typeof FOUNDER_PHOTOS]?.focal ?? ""}`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/20" />
               <div className="absolute inset-x-0 bottom-0 p-8">
