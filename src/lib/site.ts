@@ -2,7 +2,7 @@ export const site = {
   name: "Cap Alpha WhiteTrust Global Private Limited",
   footerName: "Cap Alpha WhiteTrust Global Pvt. Ltd.",
   shortName: "CAWT",
-  tagline: "Family Office & Succession Planning",
+  tagline: "Family Office & GIFT City Structures",
   description:
     "Premier fiduciary and fund services firm delivering integrated estate planning, succession advisory, family fund solutions and Indian Focussed / Global fund services for global investors.",
   url: "https://www.cawt.ai",
